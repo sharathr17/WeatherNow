@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Climate | Weather Now</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Shared JS -->
+  <script src="js/weather.js" defer></script>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <h1>🌦 Weather Now</h1>
+  <nav>
+    <a href="index.html">Today</a>
+    <a href="daily.html">7-Day</a>
+    <a href="airquality.html">Air Quality</a>
+    <a href="alerts.html">Alerts</a>
+    <a href="climate.html" class="active">Climate</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="today-card">
+  <h2 id="climateCity">Loading city...</h2>
+  <p>Real-time Climate Indicators</p>
+</section>
+
+<!-- ================= CLIMATE INDICATORS ================= -->
+<section class="content">
+  <h2>Current Climate Conditions</h2>
+
+  <div class="forecast-grid">
+    <div class="forecast-card">
+      🌡 Temperature<br>
+      <strong id="climateTemp">-- °C</strong>
+    </div>
+
+    <div class="forecast-card">
+      💧 Humidity<br>
+      <strong id="climateHumidity">-- %</strong>
+    </div>
+
+    <div class="forecast-card">
+      🧭 Pressure<br>
+      <strong id="climatePressure">-- hPa</strong>
+    </div>
+
+    <div class="forecast-card">
+      🌬 Wind Speed<br>
+      <strong id="climateWind">-- km/h</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLIMATE INSIGHT ================= -->
+<section class="content">
+  <h2>Climate Insight</h2>
+  <p id="climateInsight">
+    Analyzing climate conditions...
+  </p>
+</section>
+
+<!-- ================= CLIMATE INFO ================= -->
+<section class="content">
+  <h2>Why Climate Monitoring Matters</h2>
+
+  <ul class="list">
+    <li>Helps understand long-term weather patterns</li>
+    <li>Supports climate change awareness</li>
+    <li>Assists agriculture and water management</li>
+    <li>Improves disaster preparedness</li>
+  </ul>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2026 Weather Now | Climate</p>
+</footer>
+
+</body>
+</html>

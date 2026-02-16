@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Alerts | Weather Now</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Shared JS -->
+  <script src="js/weather.js" defer></script>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <h1>🌦 Weather Now</h1>
+  <nav>
+    <a href="index.html">Today</a>
+    <a href="daily.html">7-Day</a>
+    <a href="airquality.html">Air Quality</a>
+    <a href="alerts.html" class="active">Alerts</a>
+    <a href="climate.html">Climate</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="today-card">
+  <h2 id="alertCity">Loading city...</h2>
+  <p>Official weather alerts and warnings</p>
+</section>
+
+<!-- ================= ALERTS SECTION ================= -->
+<section class="content">
+  <h2>Active Weather Alerts</h2>
+
+  <div id="alertsContainer">
+    <p>Checking for active alerts...</p>
+  </div>
+</section>
+
+<!-- ================= INFO SECTION ================= -->
+<section class="content">
+  <h2>About Weather Alerts</h2>
+
+  <p>
+    Weather alerts are issued by official meteorological authorities
+    to warn the public about severe weather conditions such as
+    cyclones, heavy rainfall, heatwaves, storms, or strong winds.
+  </p>
+
+  <ul class="list">
+    <li>🚨 Alerts appear only when officially issued</li>
+    <li>ℹ️ If no alerts exist, a safe message is displayed</li>
+    <li>🌍 Alerts vary by location and time</li>
+  </ul>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2026 Weather Now | Weather Alerts</p>
+</footer>
+
+</body>
+</html>

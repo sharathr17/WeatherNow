@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Now | Live Weather Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Main JS -->
+  <script src="js/weather.js" defer></script>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <h1>🌦 Weather Now</h1>
+  <nav>
+    <a href="index.html" class="active">Today</a>
+    <a href="daily.html">7-Day</a>
+    <a href="airquality.html">Air Quality</a>
+    <a href="alerts.html">Alerts</a>
+    <a href="climate.html">Climate</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- ================= NETWORK STATUS ================= -->
+
+
+<!-- ================= MESSAGE BOX ================= -->
+<div id="messageBox"></div>
+
+<!-- ================= SEARCH BAR ================= -->
+<section class="search-bar">
+  <input
+    type="text"
+    id="cityInput"
+    placeholder="Search city (default: Bengaluru)"
+    aria-label="Search city"
+  >
+  <button onclick="getWeather(true)">Update Weather</button>
+</section>
+
+<!-- ================= MAIN WEATHER DASHBOARD ================= -->
+<section class="today-card">
+  <h2 id="cityName">Bengaluru</h2>
+
+  <img
+    id="weatherIcon"
+    src=""
+    alt="Weather condition icon"
+    style="width:90px"
+  >
+
+  <h1 id="temperature">-- °C</h1>
+  <p id="description">Loading current weather...</p>
+
+  <p id="details">
+    Humidity: --% &nbsp;|&nbsp; Wind: -- km/h
+  </p>
+</section>
+
+<!-- ================= QUICK WEATHER STATS ================= -->
+<section class="content">
+  <h2>Quick Weather Stats</h2>
+
+  <div class="forecast-grid">
+    <div class="forecast-card">
+      🌡 Feels Like<br>
+      <strong id="feelsLike">-- °C</strong>
+    </div>
+
+    <div class="forecast-card">
+      💧 Humidity<br>
+      <strong id="humidity">-- %</strong>
+    </div>
+
+    <div class="forecast-card">
+      🌬 Wind Speed<br>
+      <strong id="wind">-- km/h</strong>
+    </div>
+
+    <div class="forecast-card">
+      ☁ Cloud Cover<br>
+      <strong id="clouds">-- %</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOURLY FORECAST ================= -->
+<section class="content">
+  <h2>Hourly Forecast</h2>
+  <p style="color:#555; margin-bottom:10px">
+    Weather outlook for the next 24 hours
+  </p>
+
+  <div class="hourly-slider" id="hourlyForecast"></div>
+</section>
+
+<!-- ================= WEATHER INSIGHT ================= -->
+<section class="content">
+  <h2>Weather Insight</h2>
+  <p id="weatherAdvice">
+    Analyzing current conditions...
+  </p>
+</section>
+
+<!-- ================= RECENT SEARCHES ================= -->
+<section class="content">
+  <h2>Recently Searched Cities</h2>
+  <ul id="recentCities" class="list"></ul>
+</section>
+
+<!-- ================= WHY SECTION ================= -->
+<section class="content">
+  <h2>Why Weather Now?</h2>
+
+  <ul class="list">
+    <li>✔ Real-time weather updates</li>
+    <li>✔ Clean dashboard-style interface</li>
+    <li>✔ Hourly & weekly forecasts</li>
+    <li>✔ Air quality and official alerts</li>
+    <li>✔ Works smoothly on all devices</li>
+  </ul>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>
+    © 2026 Weather Now • Real-time weather information platform
+  </p>
+</footer>
+
+</body>
+</html>

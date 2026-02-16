@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>7-Day Forecast | Weather Now</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Shared JS -->
+  <script src="js/weather.js" defer></script>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <h1>🌦 Weather Now</h1>
+  <nav>
+    <a href="index.html">Today</a>
+    <a href="daily.html" class="active">7-Day</a>
+    <a href="airquality.html">Air Quality</a>
+    <a href="alerts.html">Alerts</a>
+    <a href="climate.html">Climate</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="today-card">
+  <h2 id="dailyCity">Loading...</h2>
+  <p>7-Day Weather Forecast</p>
+</section>
+
+<!-- ================= WEEKLY FORECAST ================= -->
+<section class="content">
+  <h2>Weekly Outlook</h2>
+
+  <div id="dailyForecast" class="forecast-grid">
+    <p id="dailyLoading">Loading weekly forecast...</p>
+  </div>
+</section>
+
+<!-- ================= PLANNING TIPS ================= -->
+<section class="content">
+  <h2>Weekly Planning Tips</h2>
+
+  <ul class="list">
+    <li>🌞 Clear days are ideal for outdoor activities</li>
+    <li>🌧 Carry rain protection on wet days</li>
+    <li>🌬 Windy conditions may affect travel</li>
+    <li>🌡 Stay hydrated during hot weather</li>
+  </ul>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2026 Weather Now | 7-Day Forecast</p>
+</footer>
+
+</body>
+</html>

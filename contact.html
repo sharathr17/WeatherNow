@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Weather Now</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Shared JS -->
+  <script src="js/weather.js" defer></script>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <h1>🌦 Weather Now</h1>
+  <nav>
+    <a href="index.html">Today</a>
+    <a href="daily.html">7-Day</a>
+    <a href="airquality.html">Air Quality</a>
+    <a href="alerts.html">Alerts</a>
+    <a href="climate.html">Climate</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="today-card">
+  <h1>Contact Us</h1>
+  <p>
+    Have questions, feedback, or suggestions?  
+    We’re happy to hear from you.
+  </p>
+</section>
+
+<!-- ================= CONTACT FORM ================= -->
+<section class="content">
+  <h2>Send Us a Message</h2>
+
+  <!-- Message banner (success / error) -->
+  <div id="messageBox"></div>
+
+  <form onsubmit="return validateForm()">
+    <label for="name">Full Name</label>
+    <input
+      type="text"
+      id="name"
+      placeholder="Enter your full name"
+    >
+
+    <label for="email">Email Address</label>
+    <input
+      type="email"
+      id="email"
+      placeholder="Enter your email address"
+    >
+
+    <label for="message">Message</label>
+    <textarea
+      id="message"
+      placeholder="Write your message here"
+    ></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- ================= CONTACT DETAILS ================= -->
+<section class="content">
+  <h2>Contact Information</h2>
+
+  <ul class="list">
+    <li>📧 Email: weatherforecast.in.10@gmail.com</li>
+    <li>📍 Location: Bengaluru, Karnataka, India</li>
+    <li>🌐 Website: www.weathernow.vercel.app</li>
+  </ul>
+</section>
+
+<!-- ================= WHY CONTACT ================= -->
+<section class="content">
+  <h2>Why Contact Weather Now?</h2>
+  <p>
+    Your feedback helps us improve accuracy, usability,
+    and overall experience. Whether it’s a suggestion,
+    bug report, or general inquiry, we value your input.
+  </p>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2026 Weather Now | Contact</p>
+</footer>
+
+</body>
+</html>

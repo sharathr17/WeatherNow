@@ -1,0 +1,347 @@
+/* =====================================================
+   ROOT VARIABLES
+===================================================== */
+:root {
+  --primary: #0a3d62;
+  --secondary: #1e90ff;
+  --accent: #4facfe;
+  --bg-light: #f4f7fb;
+  --card-bg: #ffffff;
+  --text-dark: #222;
+  --text-muted: #666;
+  --success: #28a745;
+  --danger: #dc3545;
+}
+
+/* =====================================================
+   RESET
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+.navbar {
+  background: linear-gradient(90deg, var(--primary), #062b45);
+  color: #fff;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.navbar nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  background: rgba(255,255,255,0.2);
+}
+
+/* =====================================================
+   NETWORK STATUS
+===================================================== */
+.network-status {
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.network-status.online {
+  background: #d4edda;
+  color: #155724;
+}
+
+.network-status.offline {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* =====================================================
+   MESSAGE / ALERT BANNER
+===================================================== */
+#messageBox {
+  max-width: 900px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.message {
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  animation: slideDown 0.4s ease;
+}
+
+.message.success {
+  background: linear-gradient(90deg, var(--success), #5fd068);
+  color: #fff;
+}
+
+.message.error {
+  background: linear-gradient(90deg, var(--danger), #ff6b6b);
+  color: #fff;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================================================
+   SEARCH BAR
+===================================================== */
+.search-bar {
+  max-width: 1100px;
+  margin: 20px auto;
+  display: flex;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.search-bar button {
+  padding: 14px 22px;
+  background: var(--secondary);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-bar button:hover {
+  background: #166dd9;
+}
+
+/* =====================================================
+   HERO / TODAY CARD
+===================================================== */
+.today-card {
+  background: linear-gradient(135deg, var(--accent), #00f2fe);
+  color: #fff;
+  text-align: center;
+  padding: 45px 20px;
+}
+
+.today-card h2 {
+  font-size: 1.8rem;
+}
+
+.today-card h1 {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+/* =====================================================
+   CONTENT SECTIONS
+===================================================== */
+.content {
+  background: var(--card-bg);
+  max-width: 1400px;
+  margin: 25px auto;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.content h2 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.content p {
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+/* =====================================================
+   LISTS
+===================================================== */
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+.list li {
+  list-style: none;
+  background: #eef4ff;
+  padding: 16px;
+  border-left: 5px solid var(--secondary);
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* =====================================================
+   FORECAST CARDS
+===================================================== */
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 18px;
+  margin-top: 15px;
+}
+
+.forecast-card {
+  background: #f9fbff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 14px;
+  font-weight: 600;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.forecast-card:hover {
+  transform: translateY(-4px);
+}
+
+/* =====================================================
+   HOURLY FORECAST
+===================================================== */
+.hourly-slider {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.hour-card {
+  min-width: 130px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+/* =====================================================
+   ALERT BOXES
+===================================================== */
+.alert {
+  padding: 16px;
+  border-radius: 8px;
+  margin: 12px 0;
+  font-weight: 600;
+}
+
+.alert.info {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.alert.danger {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* =====================================================
+   FORMS
+===================================================== */
+form {
+  max-width: 480px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+form label {
+  font-weight: 600;
+}
+
+input,
+textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+form button {
+  background: var(--secondary);
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+footer {
+  background: #0b0b0b;
+  color: #aaa;
+  text-align: center;
+  padding: 18px;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .today-card h1 {
+    font-size: 2.5rem;
+  }
+
+  .content {
+    margin: 15px;
+    padding: 25px;
+  }
+}

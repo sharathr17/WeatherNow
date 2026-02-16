@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Air Quality | Weather Now</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Shared JS -->
+  <script src="js/weather.js" defer></script>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <h1>🌦 Weather Now</h1>
+  <nav>
+    <a href="index.html">Today</a>
+    <a href="daily.html">7-Day</a>
+    <a href="airquality.html" class="active">Air Quality</a>
+    <a href="alerts.html">Alerts</a>
+    <a href="climate.html">Climate</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="today-card">
+  <h2 id="aqCity">Loading city...</h2>
+  <p>Live Air Quality Index (AQI)</p>
+</section>
+
+<!-- ================= AQI DATA ================= -->
+<section class="content">
+  <h2>Current Air Quality</h2>
+
+  <div class="forecast-grid">
+    <div class="forecast-card">
+      AQI Level<br>
+      <strong id="aqiLevel">--</strong>
+    </div>
+
+    <div class="forecast-card">
+      PM2.5<br>
+      <strong id="pm25">-- µg/m³</strong>
+    </div>
+
+    <div class="forecast-card">
+      PM10<br>
+      <strong id="pm10">-- µg/m³</strong>
+    </div>
+
+    <div class="forecast-card">
+      CO<br>
+      <strong id="co">-- µg/m³</strong>
+    </div>
+
+    <div class="forecast-card">
+      NO₂<br>
+      <strong id="no2">-- µg/m³</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HEALTH ADVICE ================= -->
+<section class="content">
+  <h2>Health Advice</h2>
+  <p id="aqAdvice">
+    Analyzing air quality conditions...
+  </p>
+</section>
+
+<!-- ================= AQI INFO ================= -->
+<section class="content">
+  <h2>What AQI Means</h2>
+
+  <ul class="list">
+    <li>1 – Good (Safe for everyone)</li>
+    <li>2 – Fair (Minor discomfort possible)</li>
+    <li>3 – Moderate (Sensitive groups affected)</li>
+    <li>4 – Poor (Health warnings)</li>
+    <li>5 – Very Poor (Avoid outdoor activity)</li>
+  </ul>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2026 Weather Now | Air Quality</p>
+</footer>
+
+</body>
+</html>
