@@ -339,12 +339,27 @@ async function loadClimateData() {
    CONTACT FORM
 ===================================================== */
 function validateForm() {
-  if (!name.value || !email.value || !message.value) {
-    showMessage("Please fill all fields", "error");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
+
+  if (
+    !nameInput.value.trim() ||
+    !emailInput.value.trim() ||
+    !messageInput.value.trim()
+  ) {
+    showMessage("Please fill all details", "error");
     return false;
   }
+
   showMessage("Message sent successfully", "success");
-  return false;
+
+  // Clear form after success
+  nameInput.value = "";
+  emailInput.value = "";
+  messageInput.value = "";
+
+  return false; // prevent page reload
 }
 
 /* =====================================================
